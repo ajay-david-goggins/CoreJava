@@ -54,7 +54,8 @@ public class DemoClass { //Main class
         vijay.Details();//now print the Details
 
         Person asra = new Person();
-
+        
+        //using setter function to set the value of instance variable to the object separately
         asra.setName("Asra");
         asra.setAge(20);
         asra.setHeight(160);
