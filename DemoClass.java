@@ -1,11 +1,11 @@
 class Person {
-    //properties
+    //properties(instance Variable)
     private String name;
     private int age;
     private float height;
     private String color;
     
-    //Behaviour
+    //Behaviour(Methods)
     public Person( String name, int age, float height, String color) {//Constructor with Argument
         this.name = name;
         this.age = age;
@@ -54,7 +54,8 @@ public class DemoClass { //Main class
         vijay.Details();//now print the Details
 
         Person asra = new Person();
-
+        
+        //using setter function to set the value of instance variable to the object separately
         asra.setName("Asra");
         asra.setAge(20);
         asra.setHeight(160);
