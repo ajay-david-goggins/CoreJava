@@ -1,11 +1,11 @@
 class Person {
-    //properties
+    //properties(instance Variable)
     private String name;
     private int age;
     private float height;
     private String color;
     
-    //Behaviour
+    //Behaviour(Methods)
     public Person( String name, int age, float height, String color) {//Constructor with Argument
         this.name = name;
         this.age = age;
