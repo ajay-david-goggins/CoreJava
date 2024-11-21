@@ -63,6 +63,17 @@ public class ArrayOne {
         System.out.println("Customized Array");
         threeDi2.printArray();
 
+        System.out.println("------------------------Jagged-Array--------------------------");
+
+        System.out.println();
+        JaggedArray jagged = new JaggedArray();
+        System.out.println("Default Array");
+        jagged.printArray();
+
+        System.out.println();
+        JaggedArray jag = new JaggedArray(3, 4, 5);
+        jag.printArray();
+
     }
 }
 
@@ -180,4 +191,52 @@ class ThreeDimensionalArray {
         }
     }
 }
+
+class JaggedArray {
+
+    private int[][] arr;
+    private int i, j, k;
+
+    public JaggedArray() {
+        i = 5;
+        j = 3;
+        k = 4;
+        arr = new int[3][];
+        arr[0] = new int[i];
+        arr[1] = new int[j];
+        arr[2] = new int[k];
+
+        populateArray();
+    }
+
+    public JaggedArray(int i, int j, int k) {
+        this.i = i;
+        this.j = j;
+        this.k = k;
+        arr = new int[3][];
+        arr[0] = new int[i];
+        arr[1] = new int[j];
+        arr[2] = new int[k];
+
+        populateArray();
+    }
+
+    private void populateArray() {
+        Random random = new Random();
+        for (int[] roo : arr) {
+            for (int i = 0; i < roo.length; i++) {
+                roo[i] = random.nextInt(10);
+            }
+        }
+    }
+
+    public void printArray() {
+        for (int[] roo : arr) {
+            for (int val : roo) {
+                System.out.print(" " + val);
+            }
+            System.out.println();
+        }
+    }
+
 
