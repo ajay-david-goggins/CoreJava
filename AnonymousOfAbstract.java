@@ -27,7 +27,7 @@ abstract class B {
 }
 
 /*
-//instead of inherit class using anomyous class to override the method
+//instead of using inherit class, using anomyous class to override the method
 class C extends B {
     public void show() {
         System.out.println("in show");
